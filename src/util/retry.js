@@ -2,11 +2,13 @@ const retry = async(asyncCallback, maxAttempts=3) => {
   try {
     return await asyncCallback();
   } catch(err) {
-    if (maxAttempts < 1) {
+    if (maxAttempts <= 1) {
       throw 'Too many attempts.';
     }
 
-    retry(callback, maxAttempts - 1);
+    console.error(err);
+    maxAttempts -= 1;
+    retry(asyncCallback, maxAttempts);
   };
 };
 
