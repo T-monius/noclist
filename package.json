@@ -1,7 +1,8 @@
 {
   "name": "noclist",
   "version": "1.0.0",
-  "description": "\"A program to retrieve a VIP list of users for BADSEC\"",
+  "description": "A program to retrieve a VIP list of users for BADSEC",
+  "type": "module",
   "main": "noclist.js",
   "scripts": {
     "test": "mocha"
@@ -11,5 +12,8 @@
     "url": "yes"
   },
   "author": "Torrel",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^8.2.1"
+  }
 }
